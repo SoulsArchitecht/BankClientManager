@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+        id: 04-create-phones-foreign-keys
+        author: Shibko Sergey
+        changes:
+          - addForeignKeyConstraint:
+              baseColumnNames: user_id
+              baseTableName: phones
+              constraintName: FK_PHONE_USER_ID
+              deferrable: false
+              initiallyDeferred: false
+              referencedColumnNames: id
+              referencedTableName: users
+              validate: true
+  - changeSet:
+        id: 05-create-emails-foreign-keys
+        author: Shibko Sergey
+        changes:
+          - addForeignKeyConstraint:
+              baseColumnNames: user_id
+              baseTableName: emails
+              constraintName: FK_EMAIL_USER_ID
+              deferrable: false
+              initiallyDeferred: false
+              referencedColumnNames: id
+              referencedTableName: users
+              validate: true

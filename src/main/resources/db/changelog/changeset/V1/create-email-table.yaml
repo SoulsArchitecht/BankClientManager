@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 03-create-phone-table
+      author: Sergey Shibko
+      changes:
+        - createTable:
+            tableName: emails
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false

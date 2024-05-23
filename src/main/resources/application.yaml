@@ -1,0 +1,23 @@
+server:
+  port: 8088
+
+spring:
+  profiles:
+    active: dev
+    default: dev
+
+
+  liquibase:
+    enabled: false
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank_client_manager?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=UTF-8
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+
